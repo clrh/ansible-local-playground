@@ -1,0 +1,12 @@
+---
+- hosts: all
+  sudo: yes
+  tasks:
+    - name: install utilities
+      apt: package={{ item }} state=present update_cache=yes
+      with_items:
+        - git-core
+        - vim-gtk
+        - tmux
+        - thunderbird
+
