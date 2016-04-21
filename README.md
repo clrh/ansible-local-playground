@@ -1,14 +1,18 @@
 # ansible-local-playground
-Playing with ansible for local installation
+
+##Playing with ansible for local installation
 
 ```
-# apt-get install software-properties-common
-# apt-add-repository ppa:ansible/ansible
-# apt-get update
-# apt-get install ansible
+# as root
+apt-get install git-core
+git clone <this repo> local-install
+cd local-install
+echo "localhost ansible_connection=local" >> /etc/ansible/hosts
+./install.sh
+```
 
-# cat /etc/ansible/hosts
-localhost ansible_connection=local
+
+## Helloworld test
 
 $ cat helloworld.yml 
 ---
