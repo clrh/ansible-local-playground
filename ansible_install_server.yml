@@ -1,0 +1,20 @@
+---
+- hosts: 127.0.0.1
+  sudo: yes
+  tasks:
+    - name: install utilities
+      apt: package={{ item }} state=present update_cache=yes
+      with_items:
+        - git-core
+        - vim
+        - tmux
+        - curl
+        - ssh
+        - lxc
+        - lxd
+        - htop
+        - less
+        - tree
+        - unzip
+        - wget
+        - zip
